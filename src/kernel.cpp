@@ -1,6 +1,6 @@
-#include "stdio.h"
+// #include "stdio.h"
 
-void kernelMain(){
+void kernelMain(void* multiboot_structure, unsigned int magicnumber){
 
     printf("test bzz\n");
     while(1);
