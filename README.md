@@ -1,17 +1,46 @@
-# myos
-long-term OS project
+# MyOS
 
-needs :
-    grub-mkrescure
-    qemu-system-x86
-installed before hand to run the kernel
+A long-term operating system project built from scratch using C++ and x86 Assembly.
 
-head into src,
-    do : 
-        make install
-        make clean
+## Requirements
 
-head back to root directory,
-    use qemu-system-i386 -cdrom myos.iso to run the os
+Install the following packages before building:
 
+- grub-mkrescue
+- qemu-system-x86
 
+## Project Structure
+
+```
+myos/
+├── iso/
+│   └── boot/
+│       ├── grub/
+│       │   └── grub.cfg
+│       └── mykernel.bin
+└── src/...
+```
+
+## Build
+
+From the `src` directory:
+
+```bash
+make
+make install
+```
+
+## Run
+
+From the project root:
+
+```bash
+grub-mkrescue -o myos.iso iso
+qemu-system-i386 -cdrom myos.iso
+```
+
+If you're using GitHub Codespaces or another headless environment:
+
+```bash
+qemu-system-i386 -cdrom myos.iso -display curses
+```

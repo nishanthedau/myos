@@ -14,9 +14,10 @@ mykernel.bin: linker.ld $(objects)
 	ld $(LDPARAMS) -T $< -o $@ $(objects)
 
 install: mykernel.bin
-	sudo cp $< /workspaces/codespaces-blank/proj/myos/iso/boot/mykernel.bin
+	sudo cp $< ..iso/boot/mykernel.bin
 
 clean:
 	rm -rf *.o mykernel.bin
+	
 
 
