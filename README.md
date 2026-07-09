@@ -16,9 +16,13 @@ myos/
 ├── iso/
 │   └── boot/
 │       ├── grub/
-│       │   └── grub.cfg
-│       └── mykernel.bin
-└── src/...
+│           └── grub.cfg
+│       
+└── src/
+    ├── kernel.cpp
+    ├── linker.ld
+    ├── loader.s
+    └── makefile
 ```
 
 ## Build
