@@ -1,4 +1,4 @@
-GPPPARAMS = -m32
+GPPPARAMS = -m32 -fno-use-cxa-atexit -nostdlib -fno-exceptions -fno-rtti -fno-builtin -fno-leading-underscore
 ASPARAMS = --32
 LDPARAMS = -m elf_i386
 
