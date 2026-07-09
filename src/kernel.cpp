@@ -3,6 +3,6 @@
 void kernelMain(){
 
     printf("test bzz\n");
-    while(1)
+    while(1);
 
 }
