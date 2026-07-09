@@ -9,7 +9,8 @@ void printf(char* str){
 
 }
 
-void kernelMain(void* multiboot_structure, unsigned int magicnumber){
+// extern cuz we dont want it to be renamed by compiler
+extern "C" void kernelMain(void* multiboot_structure, unsigned int magicnumber){
 
     printf("test bzz\n");
     while(1);
