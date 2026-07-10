@@ -1,5 +1,6 @@
 // #include "stdio.h"
 #include "types.h"
+#include "gdt.h"
 
 static int x = 0;
 static int y = 0;
@@ -45,5 +46,8 @@ extern "C" void callConstructors(){
 extern "C" void kernelMain(void *multiboot_structure, uint32_t /*multiboot_magic*/){
     printf("test bzz\n");
     printf("testok\n");
+
+    GlobalDescriptorTable gdt;
+
     while (1);
 }
