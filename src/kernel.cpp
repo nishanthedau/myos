@@ -1,4 +1,5 @@
 // #include "stdio.h"
+#include "types.h"
 
 static int x = 0;
 static int y = 0;
@@ -41,7 +42,7 @@ extern "C" void callConstructors(){
 }
 
 // extern cuz we dont want it to be renamed by compiler
-extern "C" void kernelMain(void *multiboot_structure, unsigned int /*multiboot_magic*/){
+extern "C" void kernelMain(void *multiboot_structure, uint32_t /*multiboot_magic*/){
     printf("test bzz\n");
     printf("testok\n");
     while (1);
